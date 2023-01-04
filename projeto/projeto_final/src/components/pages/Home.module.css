@@ -1,0 +1,36 @@
+.box {
+    text-align: center;
+    width: 100%;
+    min-height: 65.71vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    margin: 0px;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    /* background-color: #FFBB33; */
+}
+
+.box h1 {
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+
+.box h1 span {
+    color: #FFBB33;
+    padding: .2em;
+    background-color: #222;
+    border-radius: 1vmin;
+}
+
+.box p {
+    margin-bottom: 1.5em;
+    color: #7b7b7b;
+}
+
+.box img {
+    width: 25vw;
+    margin: 2em 0;
+}

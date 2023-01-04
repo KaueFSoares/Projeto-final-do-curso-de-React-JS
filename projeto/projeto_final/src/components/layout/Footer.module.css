@@ -7,9 +7,7 @@
     background-color: #222;
     color: white;
     padding: 3em;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .list{

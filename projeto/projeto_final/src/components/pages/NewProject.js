@@ -1,4 +1,4 @@
-import styles from "./allPages.module.css"
+import styles from "./NewProject.module.css"
 
 
 function NewProject(){

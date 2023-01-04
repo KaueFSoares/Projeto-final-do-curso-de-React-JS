@@ -1,4 +1,4 @@
-import styles from "./allPages.module.css"
+import styles from "./Company.module.css"
 
 function Company(){
 

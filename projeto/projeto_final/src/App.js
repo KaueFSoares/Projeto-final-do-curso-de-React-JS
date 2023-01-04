@@ -32,7 +32,7 @@ function App() {
 
             <Route path="/contact" exact element={<Contact />}></Route>
 
-            <Route path="/newProject" exact element={<NewProject />}></Route>
+            <Route path="/newproject" exact element={<NewProject />}></Route>
 
             <Route path="/projects" exact element={<Projects />}></Route>
 

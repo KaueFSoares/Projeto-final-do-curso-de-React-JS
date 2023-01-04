@@ -12,14 +12,14 @@
 
 .boxLeft {
     padding-left: 5vw;
-    width: 50vw;
+    width: 48vw;
     display: flex;
     flex-direction: row;
     justify-content: left;
 }
 
 .boxRigth {
-    width: 50vw;
+    width: 48vw;
     display: flex;
     flex-direction: row;
     justify-content: right;

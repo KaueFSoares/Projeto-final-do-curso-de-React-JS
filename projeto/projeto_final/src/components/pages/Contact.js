@@ -1,4 +1,4 @@
-import styles from "./allPages.module.css"
+import styles from "./Contact.module.css"
 
 
 function Contact(){
