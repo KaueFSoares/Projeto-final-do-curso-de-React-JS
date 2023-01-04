@@ -1,12 +1,17 @@
+import ProjectForm from "../project/ProjectForm"
 import styles from "./NewProject.module.css"
 
 
-function NewProject(){
+function NewProject() {
 
 
     return (
-        <div className = {styles.box}>
-            <h1>New Project</h1>
+        <div className={styles.box}>
+            <div className={styles.container}>
+                <h1>Create new project</h1>
+                <p>Create your project for add services</p>
+                <ProjectForm />
+            </div>
         </div>
     )
 }
