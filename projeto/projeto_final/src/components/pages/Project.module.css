@@ -1,14 +1,21 @@
 .box {
     text-align: center;
-    width: 96%;
-    min-height: 65.71vh;
+    /* width: 96%; */
+    min-height: 68.6vh;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
     padding: 0px;
     margin: 0px;
     margin-top: 2vw;
     margin-bottom: 2vw;
     /* background-color: #FFBB33; */
+    padding: 1em 5em;
+}
+
+.box h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 }

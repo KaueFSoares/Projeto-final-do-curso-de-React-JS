@@ -27,7 +27,7 @@ function NewProject() {
 
                 //redirect
 
-                navigate("/projects", { message: 'Project created successfuly!' })
+                navigate("/projects", { state: {message: 'Project created successfuly!'} })
             })
             .catch((err) => console.log(err))
 
@@ -37,7 +37,7 @@ function NewProject() {
         <div className={styles.box}>
             <div className={styles.container}>
                 <h1>Create new project</h1>
-                <p>Create your project for add services</p>
+                <p>Create your project for adding services</p>
                 <ProjectForm
                     handleSubmit={createPost}
                     btnText="Create project"

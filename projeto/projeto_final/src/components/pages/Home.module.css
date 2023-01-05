@@ -8,8 +8,6 @@
     align-items: center;
     padding: 4em;
     margin: 0px;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
     /* background-color: #FFBB33; */
 }
 
@@ -31,6 +29,6 @@
 }
 
 .box img {
-    width: 25vw;
+    width: 20vw;
     margin: 2em 0;
 }
