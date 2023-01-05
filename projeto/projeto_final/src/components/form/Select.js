@@ -13,6 +13,15 @@ function Select({ text, name, options, handleOnChange, value }) {
                 id={name}
             >
                 <option>Select an option</option>
+
+                {options.map((option) => (
+                    <option
+                        value={option.id}
+                        key={option.id}
+                    >
+                        {option.name}
+                    </option>
+                ))}
             </select>
         </div>
     )
