@@ -26,15 +26,15 @@ function App() {
 
           <Routes>
 
-            <Route path="/" exact element={<Home />}></Route>
+            <Route path="/" element={<Home />}></Route>
 
-            <Route path="/company" exact element={<Company />}></Route>
+            <Route path="/company" element={<Company />}></Route>
 
-            <Route path="/contact" exact element={<Contact />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
 
-            <Route path="/newproject" exact element={<NewProject />}></Route>
+            <Route path="/newproject" element={<NewProject />}></Route>
 
-            <Route path="/projects" exact element={<Projects />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
 
           </Routes>
 

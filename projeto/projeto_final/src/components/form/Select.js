@@ -11,6 +11,8 @@ function Select({ text, name, options, handleOnChange, value }) {
             <select
                 name={name}
                 id={name}
+                onChange = {handleOnChange}
+                value = {value || ""}
             >
                 <option>Select an option</option>
 
