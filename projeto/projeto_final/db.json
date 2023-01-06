@@ -1,27 +1,6 @@
 {
   "projects": [
-    {
-      "name": "Improving the marketing team",
-      "budget": "10000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 1
-    },
-    {
-      "name": "Improving IT equipaments",
-      "budget": "50000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 2
-    }
+    
   ],
   "categories": [
     {

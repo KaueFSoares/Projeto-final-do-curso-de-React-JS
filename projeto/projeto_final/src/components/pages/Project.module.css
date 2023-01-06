@@ -1,6 +1,6 @@
 .box {
     text-align: center;
-    /* width: 96%; */
+    width: 96%;
     min-height: 68.6vh;
     display: flex;
     flex-direction: column;
@@ -18,4 +18,22 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+    margin-bottom: 1em;
+}
+
+.container {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.tittleContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
 }
