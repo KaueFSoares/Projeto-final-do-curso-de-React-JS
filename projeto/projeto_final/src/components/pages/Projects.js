@@ -1,4 +1,4 @@
-import styles from "./Project.module.css"
+import styles from "./Projects.module.css"
 import Message from "../layout/Message"
 import LinkButton from "../layout/LinkButton"
 import ProjectCard from "../project/ProjectCard"
@@ -12,6 +12,12 @@ function Projects() {
     const [projects, setProjects] = useState([])
 
     const [removeLoading, setRemoveLoading] = useState(false)
+
+    const [projectMessage, setProjectMessage] = useState("")
+
+
+
+
 
     const location = useLocation()
 
@@ -44,7 +50,23 @@ function Projects() {
     }, [])
 
 
+    function removeProject(id) {
 
+        fetch(`http://localhost:5000/projects/${id}`, {
+            method: "DELETE",
+            header: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(resp => resp.json())
+            .then(() => {
+                setProjects(projects.filter((project) => project.id !== id))
+
+                setProjectMessage("Project removed successfully!")
+            })
+            .catch(err => console.log(err))
+
+    }
 
 
     return (
@@ -63,6 +85,11 @@ function Projects() {
                 type="success"
             />}
 
+            {projectMessage && <Message
+                msg={projectMessage}
+                type="success"
+            />}
+
             <div className={styles.container}>
                 {projects.length > 0 &&
                     projects.map((project) => (
@@ -72,6 +99,7 @@ function Projects() {
                             budget={project.budget}
                             category={project?.category?.name}
                             key={project.id}
+                            handleRemove={removeProject}
                         />
                     ))}
 
