@@ -9,12 +9,14 @@ import Loading from "../layout/Loading"
 import ProjectForm from "../project/ProjectForm"
 import Message from "../layout/Message"
 import ServiceForm from "../service/ServiceForm"
+import ServiceCard from "../service/ServiceCard"
 
 function Project() {
 
     const { id } = useParams()
 
     const [project, setProject] = useState([])
+    const [services, setServices] = useState([])
     const [showProjectForm, setShowProjectForm] = useState(false)
     const [showServiceForm, setShowServiceForm] = useState(false)
     const [message, setMessage] = useState("")
@@ -33,6 +35,7 @@ function Project() {
                 .then(resp => resp.json())
                 .then((data) => {
                     setProject(data)
+                    setServices(data.services)
                 })
                 .catch(err => console.log(err))
         }, 500)
@@ -125,6 +128,37 @@ function Project() {
             .catch((err) => console.log(err))
     }
 
+
+    function removeService(id, cost) {
+
+        const servicesUpdate = project.services.filter(
+            (service) => service.id !== id
+        )
+
+        const projectUpdated = project
+
+        projectUpdated.services = servicesUpdate
+
+        project.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+        fetch (`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(projectUpdated)
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            setProject(projectUpdated)
+            setServices(servicesUpdate)
+            setMessage("Service remove successfully!")
+            setType("success")
+        })
+        .catch(err => console.log(err))
+
+    }
+
     return (
         <>
             {project.name ? (
@@ -191,7 +225,22 @@ function Project() {
                         <h2>Services</h2>
 
                         <div className={styles.servicesContainer}>
+                            {services.length > 0 &&
+                                services.map((service) => (
+                                    <ServiceCard
+                                        id={service.id}
+                                        name={service.name}
+                                        cost={service.cost}
+                                        description={service.description}
+                                        key={service.id}
+                                        handleRemove={removeService}
+                                    />
+                                ))
+                            }
 
+                            {services.length === 0 &&
+                                <p>No services on the project</p>
+                            }
                         </div>
 
                     </div>
