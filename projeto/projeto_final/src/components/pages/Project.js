@@ -118,7 +118,9 @@ function Project() {
             .then(resp => resp.json())
             .then((data) => {
                 //exibir serviços
-                console.log(data)
+                setMessage("Service included successfully")
+                setType("success")
+                setShowServiceForm(false)
             })
             .catch((err) => console.log(err))
     }
