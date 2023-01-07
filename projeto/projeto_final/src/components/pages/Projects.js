@@ -25,7 +25,6 @@ function Projects() {
 
     if (location.state) {
         message = location.state.message
-        console.log(message)
     }
 
 
